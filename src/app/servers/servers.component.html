@@ -1,0 +1,36 @@
+<div class = "container">
+    <div class = "row">
+        <div class = "col-xs-12">
+            <p></p>
+            <!-- <p> {{ serverCreatedStatus }} </p> -->
+            <!-- <input type = "text" class = "form-control" (input) = "onUpdateServerName($event)"> -->
+            
+            <!-- <p> Server Name </p>
+            <input type = "text" class = "form-control" [(ngModel)] = "serverName">
+            <button class = "btn btn-primary" [disabled] = "!allowNewServer" (click) = "onCreateServer()"> Add Server </button> -->
+            
+            <!-- ngIf with else using local marker in the DOM -->
+            <!-- <p *ngIf = "isServerCreated; else noServer"> Server created with name: {{ serverName }} </p>
+            <ng-template #noServer>
+                <p> No server was created </p>
+            </ng-template> -->
+            
+            <!-- <p> {{ serverName }} </p> -->
+
+            <!-- Exercise -->
+            <!-- <input type = "text" class = "form-control" [(ngModel)] = "userName">
+            <p> {{ userName }} </p>
+            <button class = "btn btn-primary" [disabled] = "!(userName.length > 0)" (click) = "resetUsername()"> Tap </button> -->
+            
+            <!-- <app-server *ngFor = "let server of servers"></app-server> -->
+            <!-- <app-server> </app-server> -->
+            <!-- Exercise -->
+            <button class = "btn btn-primary" (click) = "toggleDisplay()"> Display Details </button>
+            <!-- <p [ngStyle] = "{'color':'transparent'}"> Secret Password = Tuna </p> -->
+            <p [ngClass] = "{display: displayText === true}"> Secret Password = Tuna </p>
+            <!-- <p *ngIf = displayText> Secret Password = Tuna </p> -->
+            <!-- <p *ngFor = "let click of buttonClicks" [ngClass] = "{futureLog: click > 5}" [ngStyle] = "click > 5 && {'background-color': 'blue'}">{{click}}</p> -->
+            <p *ngFor = "let click of buttonClicks; let i = index" [ngClass] = "{futureLog: i > 4}" [ngStyle] = "i > 4 && {'background-color': 'blue'}">{{click}}</p>
+        </div>
+    </div>
+</div>
